@@ -34,7 +34,7 @@
         <!-- button part -->
         <div class="text-center mt-24">
             <button class="btn py-4 px-12 font-semibold font-sans mr-4 bg-green-500">Donation</button>
-            <button class="btn py-4 px-12 font-semibold font-sans  bg-green-500">History</button>
+            <button class="btn py-4 px-12 font-semibold font-sans  ">History</button>
         </div>
 
     </header>
@@ -62,7 +62,7 @@
 
                 <!-- modal start here -->
                  <!-- Open the modal using ID.showModal() method -->
-                      <button id="donate-n" class="btn bg-green-500 mt-5 w-full" onclick="my_modal_1.showModal()" >Donate Now</button>
+                      <button id="donate-n" class="btn bg-green-500 mt-5 w-full" >Donate Now</button>
                       <dialog id="my_modal_1" class="modal">
                         <div class="modal-box text-center">
                           <h3 class="text-5xl font-extrabold">Congrates!</h3>
@@ -100,15 +100,15 @@
               <div>
                 <div class="flex gap-3">
                     <img src="./assets/coin.png" alt="">
-                    <h3>0 BDT</h3>
+                    <h3 id="donate-2">0 BDT</h3>
                 </div>
                 <h1 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
                 <p class="py-6">
                     The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
                 </p>
-                <input type="text" placeholder="Write Donation Amount" class="input input-ghost w-full w-full" />
+                <input id="donete-input-2" type="text" placeholder="Write Donation Amount" class="input input-ghost w-full w-full" />
                 <!-- modal button start here -->
-                <button class="btn bg-green-500 mt-5 w-full" onclick="my_modal_1.showModal()">Donate Now</button>
+                <button class="btn bg-green-500 mt-5 w-full">Donate Now</button>
                 <dialog id="my_modal_1" class="modal">
                   <div class="modal-box text-center">
                     <h3 class="text-5xl font-extrabold">Congrates!</h3>
@@ -172,6 +172,12 @@
               </div>
             </div>
           </div>
+
+
+          <!-- History section here -->
+          <section>
+            
+          </section>
     </main>
     <script src="js/calculate.js"></script>
     
