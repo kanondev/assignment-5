@@ -28,6 +28,16 @@ document.getElementById('donate-n')
 else{
     alert('Enter valid Amount');
 }
+const historyItem = document.createElement("div");
+historyItem.className =
+"bg-white p-3 rounded-md border-1-2 border-indigo-500";
+historyItem.innerHTML = `
+<h2 class="text-2xl font-semibold"> Donet: ${nohakhali}  Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+<p> Date: ${new Date().toLocaleDateString()} </p>
+`;
+
+const historyContainer = document.getElementById('history');
+historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 
 })
 
@@ -43,9 +53,7 @@ document.getElementById('f')
 
     const mainBlance = parseFloat(document.getElementById('main-blance').innerText);
     const donateBlanceFeni = parseFloat(document.getElementById('donate-2').innerText);
-    console.log(donateBlanceFeni)
     const feni = parseFloat(document.getElementById("donete-input-2").value);
-    console.log(feni)
 
 //     // 2nd work calculated
 
@@ -68,6 +76,17 @@ document.getElementById('f')
 else{
     alert('Enter valid Amount');
 }
+
+const historyItem = document.createElement("div");
+historyItem.className =
+"bg-white p-3 rounded-md border-1-2 border-indigo-500";
+historyItem.innerHTML = `
+<h2 class="text-2xl font-semibold"> Donet: ${feni}Taka is Donated for Flood Relief in Feni,Bangladesh</h2>
+<p> Date: ${new Date().toLocaleDateString()} </p>
+`;
+
+const historyContainer = document.getElementById('history');
+historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 
 })
 
@@ -103,8 +122,29 @@ document.getElementById('aid')
 else{
     alert('Enter valid Amount');
 }
+const historyItem = document.createElement("div");
+historyItem.className =
+"bg-white p-3 rounded-md border-1-2 border-indigo-500";
+historyItem.innerHTML = `
+<h2 class="text-2xl font-semibold"> Donet: ${aid}Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h2>
+<p> Date: ${new Date().toLocaleDateString()} </p>
+`;
+
+const historyContainer = document.getElementById('history');
+historyContainer.insertBefore(historyItem, historyContainer.firstChild);
 
 })
+
+// history function
+const historyButton = document.getElementById('history-btn');
+historyButton.addEventListener('click', function(){
+document.getElementById('history').classList.remove("hidden");
+document.getElementById('content-hidden').classList.add("hidden")
+document.getElementById('history-btn').classList.add('bg-green-500')
+document.getElementById('bonation-btn').classList.remove("bg-green-500");
+
+})
+
 
 
 // Blog section
@@ -114,3 +154,19 @@ const button = document.getElementById('blog-button');
 button.addEventListener('click', function(){
     window.location.href = 'blog.html';
 })
+
+
+
+// dynamic div create
+
+
+// const historyItem = document.createElement("div");
+// historyItem.className =
+// "bg-white p-3 rounded-md border-1-2 border-indigo-500";
+// historyItem.innerHTML = `
+// <h2> Donet: Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+// <p> </p>
+// `;
+
+// const historyContainer = document.getElementById('history');
+// historyContainer.insertBefore(historyItem, historyContainer.firstChild);
