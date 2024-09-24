@@ -105,3 +105,12 @@ else{
 }
 
 })
+
+
+// Blog section
+
+
+const button = document.getElementById('blog-button');
+button.addEventListener('click', function(){
+    window.location.href = 'blog.html';
+})
