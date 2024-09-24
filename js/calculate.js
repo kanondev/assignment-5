@@ -30,7 +30,7 @@ else{
 }
 const historyItem = document.createElement("div");
 historyItem.className =
-"bg-white p-3 rounded-md border-1-2 border-indigo-500";
+"bg-white p-3 rounded-md border-1-2 border-indigo-500 shadow-md";
 historyItem.innerHTML = `
 <h2 class="text-2xl font-semibold"> Donet: ${nohakhali}  Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
 <p> Date: ${new Date().toLocaleDateString()} </p>
@@ -79,7 +79,7 @@ else{
 
 const historyItem = document.createElement("div");
 historyItem.className =
-"bg-white p-3 rounded-md border-1-2 border-indigo-500";
+"bg-white p-3 rounded-md border-1-2 border-indigo-500 shadow-md";
 historyItem.innerHTML = `
 <h2 class="text-2xl font-semibold"> Donet: ${feni}Taka is Donated for Flood Relief in Feni,Bangladesh</h2>
 <p> Date: ${new Date().toLocaleDateString()} </p>
@@ -124,7 +124,7 @@ else{
 }
 const historyItem = document.createElement("div");
 historyItem.className =
-"bg-white p-3 rounded-md border-1-2 border-indigo-500";
+"bg-white p-3 rounded-md border-1-2 border-indigo-500 shadow-md";
 historyItem.innerHTML = `
 <h2 class="text-2xl font-semibold"> Donet: ${aid}Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h2>
 <p> Date: ${new Date().toLocaleDateString()} </p>
@@ -141,7 +141,18 @@ historyButton.addEventListener('click', function(){
 document.getElementById('history').classList.remove("hidden");
 document.getElementById('content-hidden').classList.add("hidden")
 document.getElementById('history-btn').classList.add('bg-green-500')
-document.getElementById('bonation-btn').classList.remove("bg-green-500");
+document.getElementById('donation-btn').classList.remove("bg-green-500");
+
+})
+
+// Donnet button clicke
+
+const donateButton = document.getElementById('donation-btn');
+donateButton.addEventListener('click', function(){
+document.getElementById('history').classList.add("hidden");
+document.getElementById('content-hidden').classList.remove("hidden")
+document.getElementById('donation-btn').classList.add('bg-green-500')
+document.getElementById('history-btn').classList.remove("bg-green-500");
 
 })
 
@@ -154,19 +165,3 @@ const button = document.getElementById('blog-button');
 button.addEventListener('click', function(){
     window.location.href = 'blog.html';
 })
-
-
-
-// dynamic div create
-
-
-// const historyItem = document.createElement("div");
-// historyItem.className =
-// "bg-white p-3 rounded-md border-1-2 border-indigo-500";
-// historyItem.innerHTML = `
-// <h2> Donet: Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
-// <p> </p>
-// `;
-
-// const historyContainer = document.getElementById('history');
-// historyContainer.insertBefore(historyItem, historyContainer.firstChild);
